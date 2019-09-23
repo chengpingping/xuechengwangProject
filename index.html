@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*css初始化*/
+			*{
+				/*清除内外边距*/
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;/*去掉列表的小点*/
+			}
+			/*清除浮动*/
+			.clearfix:before,.clearfix:after{
+				display: table;
+				content: "";
+			}
+			.clearfix:after{
+				clear: both;
+			}
+			.clearfix{
+				*zoom: 1;/*支持IE6和IE7*/
+			}
+			a{
+				color: black;
+				text-decoration: none;
+			}
+			body{
+				background-color: #f3f5f7;
+			}
+			header{
+				height: 100px;
+				/*background-color: #ccc;*/
+				overflow: hidden;/*放置外边距合并的问题*/
+			}
+			input{
+				border: 0;
+				box-sizing: border-box;/*将盒子的border和padding加到盒子的width中*/
+			}
+			/*页面部分*/
+			nav{
+				width: 1366px;
+				height: 42px;
+				/*background-color: purple;*/
+				margin: 26px auto;/*盒子水平居中对齐*/
+			}
+			.logo{
+				float: left;
+			}
+			.navbar{
+				float: left;
+				height: 42px;
+				line-height: 42px;/*行高会继承*/
+				margin-left: 50px;
+			}
+			.navbar li{
+				float: left;
+			}
+			.navbar li a{
+				padding: 0 10px;
+				display: block;/*a是行内元素,给高需要转化为块级*/
+				height: 42px;
+			}
+			.navbar li a:hover{
+				border-bottom: 2px solid skyblue;
+			}
+			.search{
+				width: 410px;
+				height: 42px;
+				border: 1px solid skyblue;
+				float: right;
+			}
+			.search input[type=text]{
+				float: left;
+				width: 360px;
+				height: 42px;
+				padding-left: 20px;
+			}
+			.search input[type=submit]{
+				float: left;
+				width: 50px;
+				height: 42px;
+				background: skyblue url() center center no-repeat;
+			}
+			.personal{
+				float: right;
+				height: 42px;
+				line-height: 42px;
+				margin: 0 15px 0 35px;
+			}
+			.personal img{
+				width: 10px;
+				height: 10px;
+				margin: 0 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--结构-->
+		<header>
+			<nav>
+				<!--logo-->
+				<div class="logo">
+					<img src=""/>
+				</div>
+				<!--navbar-->
+				<div class="navbar">
+					<ul>
+						<li><a href="">首页</a></li>
+						<li><a href="">课程</a></li>
+						<li><a href="">职业规划</a></li>
+					</ul>
+				</div>
+				<!--个人中心-->
+				<div class="personal">
+					<a href="#">个人中心<img src="" /></a>
+					<a href="#"><img src="" />aois</a>
+				</div>
+				<!--search-->
+				<div class="search">
+					<form action="">
+						<input type="text" placeholder="请输入关键字" />
+						<input type="submit" value="" />
+					</form>
+				</div>
+			</nav>
+		</header>
+	</body>
+</html>
